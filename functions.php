@@ -7,11 +7,19 @@ $name=(string)$name;
 
 function age($age, $name){
     if ((int)$age and (string)$name){
-        echo("$name you are $age years old");
+        echo("$name you are $age years old".PHP_EOL);
     }
     else{
-        echo("Invalid data types for the files");
+        echo("Invalid data types for the files".PHP_EOL);
     }
 }
-age($age, $name)
+age($age, $name);
+
+
+function greet($name){
+    return "Hello, $name";
+}
+
+echo greet("Kousik");
+
 ?>
