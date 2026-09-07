@@ -6,16 +6,14 @@ $student=[
     "password"=>"Kousik@15",
     "course"=>'M.Sc'
 ];
-echo("Mr. ".$student["name"].PHP_EOL);
 
-$hashed_password=password_hash($student['password'], PASSWORD_DEFAULT);
-echo($student['name']."'s" . " encrypted password is " . $hashed_password. PHP_EOL);
+$hashed_password=password_hash($student["password"], PASSWORD_DEFAULT);
 
-
-if (password_verify("Kousik@15", $hashed_password)){
-    echo("the password's matched, redirecting to admin page");
+if (password_verify($student["password"], $hashed_password)){
+    echo "The passwords match, authenticating to the database" ;
 }
 else{
-    echo("the password might be mismatched, we are not authorizing");
+    echo "The passwords do not match, please enter the correct username/email or password" ;
 }
+
 ?>
