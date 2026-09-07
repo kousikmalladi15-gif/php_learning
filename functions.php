@@ -5,7 +5,7 @@ $name=readline("Please enter your name : ");
 $age=(int)$age;
 $name=(string)$name;
 
-function age($age, $name){
+function age(int $age, string $name){
     if ((int)$age and (string)$name){
         echo("$name you are $age years old".PHP_EOL);
     }
@@ -16,7 +16,7 @@ function age($age, $name){
 age($age, $name);
 
 
-function greet($name){
+function greet(string $name){
     return "Hello, $name";
 }
 
