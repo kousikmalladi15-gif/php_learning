@@ -8,7 +8,7 @@ echo $capital_name.PHP_EOL;
 $roll_no=25;
 $padding_digit='0';
 $padded_str=str_pad($roll_no, 5,$padding_digit, STR_PAD_LEFT );
-echo $padded_str.PHP_EOL;
+echo $padded_str . PHP_EOL;
 
 echo("your name has " .strlen(str_replace(' ','', $name)). " letters".PHP_EOL);
 //strlen gets the length of string
@@ -28,6 +28,9 @@ $fruits=explode('-', $fruits);
 foreach ($fruits as $fruit){
     echo $fruit . PHP_EOL;
 }
+
+echo strchr($name, 'm', true);
+//returns the next subsequent characters, if the third param is false ( by default ) and returns before characters, if true;
 
 
 ?>
